@@ -1,0 +1,23 @@
+.error-msg {
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+}
+
+input:invalid[focused='true']~.error-msg {
+    display: block;
+}
+
+input:invalid[focused='true'] {
+    border: 1px solid red;
+}
+
+input[name=submit]{
+    margin-left: 5px;
+    background-color: #3e3e44 !important;
+}
+
+input[name=submit]:hover{
+    background-color: black !important;
+}

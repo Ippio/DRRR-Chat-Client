@@ -1,0 +1,49 @@
+.md-modal,
+.md-modal__shade {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.md-modal {
+    z-index: 9999;
+    display: flex;
+    max-height: 100%;
+}
+
+.md-modal__shade {
+    background: rgba(0, 0, 0, .4);
+    transition: .5s cubic-bezier(0, 1.2, 1, 1);
+}
+
+.md-modal__box {
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.md-modal__box {
+    max-width: 100%;
+    overflow: auto;
+    min-height: 0;
+    overscroll-behavior: contain;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .md-modal__shade[data-v-123772aa] {
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+    }
+}
+
+@media (min-width: 40rem) {
+    .md-modal__box[data-v-123772aa] {
+        margin-left: 16px;
+        margin-bottom: 16px;
+        margin-right: 16px;
+        margin-top: 16px;
+        max-height: calc(100% - 3rem);
+    }
+}
